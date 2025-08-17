@@ -1,5 +1,5 @@
 from agents import Agent
-from care_plan_models import SpecialistAdvice
+from app.models import SpecialistAdvice
 
 DIETIST_INSTRUCTIONS = """
 Je bent een gespecialiseerde diëtist werkzaam in de verpleeghuiszorg.

@@ -1,5 +1,5 @@
 from agents import Agent
-from care_plan_models import CareProblems
+from app.models import CareProblems
 
 INSTRUCTIONS = """
 Je bent een ervaren verpleegkundige in een verpleeghuis die zorgdossiers analyseert.

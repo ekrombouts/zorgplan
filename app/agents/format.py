@@ -1,5 +1,5 @@
 from agents import Agent
-from care_plan_models import CompleteCareplan
+from app.models import CompleteCareplan
 
 INSTRUCTIONS = """
 Je bent een zorgcoördinator die zorgplannen presenteert in een overzichtelijke markdown format.

@@ -1,5 +1,5 @@
 from agents import Agent
-from care_plan_models import CarePlanRule
+from app.models import CarePlanRule
 
 INSTRUCTIONS = """
 Je bent een ervaren zorgcoördinator in een verpleeghuis die zorgplannen opstelt.

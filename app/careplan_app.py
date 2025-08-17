@@ -1,6 +1,6 @@
 import gradio as gr
 from dotenv import load_dotenv
-from careplan_manager import CareplanManager
+from app.careplan_manager import CareplanManager
 import os
 
 load_dotenv(override=True)

@@ -9,3 +9,6 @@ wheels/
 # Virtual environments
 .venv
 .env
+
+data/*
+!data/vb_dossier.txt

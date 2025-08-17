@@ -1,10 +1,13 @@
 from agents import Runner, trace, gen_trace_id
-from problem_identification_agent import problem_identification_agent
-from care_plan_agent import care_plan_agent
-from specialist_agents import dietist_agent, fysio_agent
-from format_agent import format_agent
-from email_agent import email_agent
-from care_plan_models import (
+from app.agents import (
+    problem_identification_agent,
+    care_plan_agent, 
+    dietist_agent,
+    fysio_agent,
+    format_agent,
+    email_agent
+)
+from app.models import (
     CareProblems,
     CarePlanRule,
     SpecialistAdvice,

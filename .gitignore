@@ -12,3 +12,5 @@ wheels/
 
 data/*
 !data/vb_dossier.txt
+
+*.code-workspace

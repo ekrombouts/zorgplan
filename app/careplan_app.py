@@ -7,7 +7,18 @@ load_dotenv(override=True)
 
 
 async def process_careplan(file):
-    """Verwerk het geüploade clientdossier en genereer een zorgplan"""
+    """
+    Verwerkt een geüpload clientdossier en genereert een zorgplan.
+
+    Accepteert een bestand (bytes of file object), leest de inhoud en start het zorgplanproces.
+    Geeft statusupdates terug via een async generator. Geeft een foutmelding bij problemen.
+
+    Args:
+        file (bytes of file-like object): Het geüploade clientdossier.
+
+    Yields:
+        str: Statusupdates of foutmeldingen tijdens het verwerken.
+    """
     if file is None:
         yield "Geen bestand geüpload. Upload alstublieft een clientdossier."
         return
@@ -61,9 +72,6 @@ with gr.Blocks() as ui:
 
     # Event handlers
     process_button.click(fn=process_careplan, inputs=file_input, outputs=output_display)
-
-    # Ook Enter in file upload
-    file_input.upload(fn=process_careplan, inputs=file_input, outputs=output_display)
 
 if __name__ == "__main__":
     ui.launch(inbrowser=True)

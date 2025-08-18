@@ -6,7 +6,7 @@ from .care_plan import care_plan_agent
 from .problem_identification import problem_identification_agent
 from .specialist import dietist_agent, fysio_agent
 from .format import format_agent
-from .email import email_agent
+from .email_agent import email_agent
 
 __all__ = [
     'care_plan_agent',

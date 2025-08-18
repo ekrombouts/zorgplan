@@ -15,6 +15,7 @@ class CareProblem(BaseModel):
 
     title: str = Field(description="Korte, duidelijke titel van het zorgprobleem")
     description: str = Field(description="Korte beschrijving van het probleem")
+    reasoning: str = Field(description="Redenering waarom je dit probleem hebt geïdentificeerd")
 
 
 class CareGoal(BaseModel):

@@ -4,9 +4,10 @@ Entry point voor de Zorgplan applicatie.
 
 from app.careplan_app import ui
 
+
 def main():
     """Start de Gradio applicatie"""
-    print("🏥 Starting Zorgplan applicatie...")
+    print("Zorgplan applicatie starten...")
     ui.launch(inbrowser=True)
 
 

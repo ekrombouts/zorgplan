@@ -1,5 +1,5 @@
 from agents import Runner, trace, gen_trace_id
-from app.agents import (
+from app.careplan_agents import (
     problem_identification_agent,
     care_plan_agent, 
     dietist_agent,
@@ -20,15 +20,28 @@ from typing import List
 class CareplanManager:
 
     async def run(self, dossier_content: str):
-        """Voer het complete zorgplanproces uit, met status updates"""
-        trace_id = gen_trace_id()
+        """
+        Voer het complete zorgplanproces uit, met status updates
+
+        Voert het volledige zorgplanproces uit als een asynchrone generator, waarbij tussentijdse statusupdates worden gegeven.
+        Ontvangt het dossier als tekst, analyseert problemen, stelt zorgplanregels op, vraagt specialistisch advies,
+        stelt het zorgplan samen, formatteert het resultaat en verstuurt het per e-mail. Geeft statusberichten en het
+        geformatteerde zorgplan terug via yield.
+        
+        Args:
+            dossier_content (str): De inhoud van het cliëntdossier als tekst.
+
+        Yields:
+            str: Statusupdates en het geformatteerde zorgplan.
+        """
+        trace_id = gen_trace_id()  # Genereer een unieke trace ID
         with trace("Zorgplan trace", trace_id=trace_id):
             print(
                 f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}"
             )
             yield f"View trace: https://platform.openai.com/traces/trace?trace_id={trace_id}"
 
-            yield "Analyseren van het clientdossier..."
+            yield "Identificeren van zorgproblemen..."
             care_problems = await self.identify_problems(dossier_content)
 
             yield "Opstellen van zorgplanregels..."

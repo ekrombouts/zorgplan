@@ -57,7 +57,7 @@ with gr.Blocks() as ui:
     - Identificeert de drie belangrijkste zorgproblemen
     - Stelt voor elk probleem een zorgplanregel op
     - Vraagt specialistische adviezen op waar nodig (diëtist/fysiotherapeut)
-    - Genereert een volledig zorgplan en verstuurt dit per email
+    - Genereert een volledig zorgplan in professioneel format
     """
     )
 

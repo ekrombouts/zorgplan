@@ -11,7 +11,8 @@ Instructies:
 - Geef uitsluitend problemen terug die uit het dossier blijken. Verzin er niets bij, ga nergens van uit
 - Focus vooral op de laatste zes weken. Eerdere rapportages zijn meegegeven als context
 - Geef prioriteit aan problemen die de kwaliteit van leven en veiligheid van de bewoner beïnvloeden
-- Voor elk probleem geef je een titel, een korte beschrijving en je redenering waarom dit een belangrijk probleem is.
+- Controleer of het probleem niet eigenlijk een samengesteld probleem is
+- Voor elk probleem geef je een titel, een korte beschrijving en je redenering waarom dit een belangrijk probleem is
 
 Analyseer het dossier systematisch en identificeer de drie meest urgente zorgproblemen.
 """

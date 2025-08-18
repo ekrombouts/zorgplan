@@ -17,15 +17,12 @@ flowchart TD
     M --> N
     N --> O[CompleteCareplan samenstellen]
     O --> P[Formatteren voor weergave...]
-    P --> Q[format_agent]
-    Q --> R[Versturen per email...]
-    R --> S[email_agent]
-    S --> T[Zorgplan voltooid!]
+    P --> Q[template-based formatting<br/>Geen AI meer!]
+    Q --> T[Zorgplan voltooid!]
     
     style C fill:#e1f5fe
     style F fill:#e8f5e8
     style J fill:#fff3e0
     style K fill:#fff3e0
     style Q fill:#f3e5f5
-    style S fill:#ffebee
 ```

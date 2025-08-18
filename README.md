@@ -68,7 +68,6 @@ Het systeem analyseert een clientdossier (.txt bestand) en:
    - Diëtist (bij gewichtsverlies/verminderde intake)
    - Fysiotherapeut (bij valrisico/mobiliteit problemen)
 4. **Presenteert het complete zorgplan** in een overzichtelijke format
-5. **Verstuurt het zorgplan per email** naar het zorgteam
 
 ## Architectuur
 
@@ -78,8 +77,7 @@ De applicatie gebruikt de OpenAI Agents SDK met verschillende gespecialiseerde a
 - **CarePlanAgent**: Stelt zorgplanregels op
 - **DiëtistAgent**: Geeft voedingsadviezen
 - **FysiotherapeutAgent**: Geeft mobiliteitsadviezen  
-- **FormatAgent**: Formatteert output voor weergave
-- **EmailAgent**: Verstuurt het zorgplan per email
+- **Template-based Formatting**: Formatteert output naar professionele markdown (geen AI)
 
 ## Installatie
 
@@ -95,7 +93,6 @@ cp .env.example .env
 
 3. Stel je environment variabelen in:
    - `OPENAI_API_KEY`: Je OpenAI API key
-   - `SENDGRID_API_KEY`: Je SendGrid API key voor email functionaliteit
 
 ## Gebruik
 
@@ -107,7 +104,7 @@ python careplan_app.py
 1. Upload een clientdossier (.txt bestand)
 2. Klik op "Genereer Zorgplan"
 3. Het systeem toont real-time updates van het proces
-4. Het complete zorgplan wordt weergegeven en per email verstuurd
+4. Het complete zorgplan wordt weergegeven
 
 ## Voorbeeld Clientdossier
 

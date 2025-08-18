@@ -32,7 +32,7 @@ class CareAction(BaseModel):
     action: str = Field(description="Specifieke actie of interventie")
 
 
-class CarePlanRule(BaseModel):
+class CarePlanItem(BaseModel):
     """Een complete zorgplanregel"""
 
     problem_title: str = Field(description="Titel van het zorgprobleem")
@@ -54,11 +54,7 @@ class SpecialistAdvice(BaseModel):
 class CompleteCareplan(BaseModel):
     """Het complete zorgplan"""
 
-    patient_summary: str = Field(
-        description="Korte samenvatting van de patiëntsituatie"
-    )
-    care_rules: List[CarePlanRule] = Field(description="Lijst van zorgplanregels")
+    careplan_items: List[CarePlanItem] = Field(description="Lijst van zorgplanregels")
     specialist_advice: List[SpecialistAdvice] = Field(
         description="Eventuele specialistische adviezen"
     )
-    conclusion: str = Field(description="Afsluitende opmerking over het zorgplan")

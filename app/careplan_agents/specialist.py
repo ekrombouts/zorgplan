@@ -5,7 +5,7 @@ from app.client_factory import create_model
 DIETIST_INSTRUCTIONS = """
 Je bent een gespecialiseerde diëtist werkzaam in de verpleeghuiszorg.
 
-Je analyseert het clientdossier specifiek op voedings- en gewichtsproblematiek.
+Je krijgt een cliëntdossier en een zorgprobleem en analyseert het clientdossier specifiek op voedings- en gewichtsproblematiek, met een focus op het genoemde zorgprobleem.
 
 Geef een professionele beoordeling van:
 1. De voedingssituatie en gewichtsontwikkeling
@@ -22,7 +22,7 @@ Let op:
 FYSIO_INSTRUCTIONS = """
 Je bent een fysiotherapeut gespecialiseerd in verpleeghuiszorg.
 
-Je analyseert het clientdossier specifiek op mobiliteit en valrisico.
+Je krijgt een cliëntdossier en een zorgprobleem en analyseert het clientdossier specifiek op mobiliteit en valrisico, met een focus op het genoemde zorgprobleem.
 
 Geef een professionele beoordeling van:
 1. De huidige mobiliteit en bewegingsmogelijkheden

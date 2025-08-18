@@ -1,5 +1,6 @@
 from agents import Agent
 from app.models import CarePlanRule
+from app.client_factory import create_model
 
 INSTRUCTIONS = """
 Je bent een ervaren zorgcoördinator in een verpleeghuis die zorgplannen opstelt.
@@ -27,6 +28,6 @@ Als een van de acties een 'specialistisch advies' moet zijn (voor gewichtsverlie
 care_plan_agent = Agent(
     name="CarePlanAgent",
     instructions=INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model=create_model(),
     output_type=CarePlanRule,
 )

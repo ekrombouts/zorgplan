@@ -3,6 +3,7 @@ from typing import Dict
 import sendgrid
 from sendgrid.helpers.mail import Email, Mail, Content, To
 from agents import Agent, function_tool
+from app.client_factory import create_model
 
 
 @function_tool
@@ -47,5 +48,5 @@ email_agent = Agent(
     name="EmailAgent",
     instructions=INSTRUCTIONS,
     tools=[send_careplan_email],
-    model="gpt-4o-mini",
+    model=create_model(),
 )

@@ -1,5 +1,6 @@
 from agents import Agent
 from app.models import SpecialistAdvice
+from app.client_factory import create_model
 
 DIETIST_INSTRUCTIONS = """
 Je bent een gespecialiseerde diëtist werkzaam in de verpleeghuiszorg.
@@ -39,13 +40,13 @@ Let op:
 dietist_agent = Agent(
     name="DiëtistAgent",
     instructions=DIETIST_INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model=create_model(),
     output_type=SpecialistAdvice,
 )
 
 fysio_agent = Agent(
     name="FysiotherapeutAgent",
     instructions=FYSIO_INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model=create_model(),
     output_type=SpecialistAdvice,
 )

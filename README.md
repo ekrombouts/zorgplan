@@ -2,6 +2,62 @@
 
 Een AI-gestuurde applicatie voor het automatisch genereren van zorgplannen op basis van clientdossiers in verpleeghuizen.
 
+## ⚙️ Configuratie
+
+Het project ondersteunt zowel Azure OpenAI als reguliere OpenAI configuratie via environment variables.
+
+### Environment Variables
+
+Kopieer `.env.example` naar `.env` en pas de waarden aan:
+
+```bash
+cp .env.example .env
+```
+
+### Azure OpenAI (Aanbevolen)
+
+Stel de volgende variabelen in voor Azure OpenAI:
+
+```env
+USE_AZURE_OPENAI=true
+DISABLE_TRACING=true
+AZURE_OPENAI_API_KEY=je_azure_openai_api_key
+AZURE_OPENAI_API_VERSION=2024-02-15-preview
+AZURE_OPENAI_ENDPOINT=https://je-resource.openai.azure.com/
+AZURE_OPENAI_DEPLOYMENT=je_deployment_naam
+AZURE_MODEL=gpt-4o
+```
+
+### Reguliere OpenAI
+
+Voor reguliere OpenAI configuratie:
+
+```env
+USE_AZURE_OPENAI=false
+DISABLE_TRACING=true
+OPENAI_API_KEY=je_openai_api_key
+DEFAULT_MODEL=gpt-4o-mini
+```
+
+### Tracing
+
+Tracing wordt standaard uitgeschakeld (`DISABLE_TRACING=true`) om privacy te waarborgen en te voorkomen dat gegevens naar OpenAI worden gestuurd.
+
+## 🚀 Installatie en Gebruik
+
+Het project gebruikt `uv` als package manager:
+
+```bash
+# Installeer dependencies
+uv sync
+
+# Start de applicatie
+uv run python -m app.careplan_app
+
+# Of run een specifieke agent
+uv run python app/careplan_agents/problem_identification.py
+```
+
 ## Functionaliteit
 
 Het systeem analyseert een clientdossier (.txt bestand) en:

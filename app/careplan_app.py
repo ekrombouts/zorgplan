@@ -1,9 +1,13 @@
 import gradio as gr
 from dotenv import load_dotenv
 from app.careplan_manager import CareplanManager
+from app.client_factory import setup_global_client
 import os
 
 load_dotenv(override=True)
+
+# Setup global client configuration
+setup_global_client()
 
 
 async def process_careplan(file):

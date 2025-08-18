@@ -1,5 +1,6 @@
 from agents import Agent
 from app.models import CareProblems
+from app.client_factory import create_model
 
 INSTRUCTIONS = """
 Je bent een ervaren verpleegkundige in een verpleeghuis die zorgdossiers analyseert. Je spreekt en schrijft vloeiend Nederlands.
@@ -18,6 +19,6 @@ Analyseer het dossier systematisch en identificeer de drie meest urgente zorgpro
 problem_identification_agent = Agent(
     name="ProblemIdentificationAgent",
     instructions=INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model=create_model(),
     output_type=CareProblems,
 )

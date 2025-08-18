@@ -60,8 +60,8 @@ class CareplanManager:
             yield "Formatteren voor weergave..."
             formatted_plan = await self.format_careplan(complete_careplan)
 
-            yield "Versturen per email..."
-            await self.send_email(complete_careplan)
+            # yield "Versturen per email..."
+            # await self.send_email(complete_careplan)
 
             yield "Zorgplan voltooid!"
             yield formatted_plan

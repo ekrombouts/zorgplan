@@ -1,5 +1,6 @@
 from agents import Agent
 from app.models import CompleteCareplan
+from app.client_factory import create_model
 
 INSTRUCTIONS = """
 Je bent een zorgcoördinator die zorgplannen presenteert in een overzichtelijke markdown format.
@@ -18,5 +19,5 @@ Structuur de output logisch met duidelijke secties en gebruik een warme maar pro
 format_agent = Agent(
     name="FormatAgent",
     instructions=INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model=create_model(),
 )

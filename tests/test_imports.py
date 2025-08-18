@@ -9,7 +9,7 @@ def test_imports():
     """Test alle belangrijke imports"""
     try:
         # Test models import
-        from app.models import CareProblems, CarePlanRule, SpecialistAdvice, CompleteCareplan
+        from app.models import CareProblems, CarePlanItem, SpecialistAdvice, CompleteCareplan
         print("✅ Models import successful")
         
         # Test agents import
@@ -17,9 +17,7 @@ def test_imports():
             problem_identification_agent,
             care_plan_agent,
             dietist_agent,
-            fysio_agent,
-            format_agent,
-            email_agent
+            fysio_agent
         )
         print("✅ Careplan Agents import successful")
         

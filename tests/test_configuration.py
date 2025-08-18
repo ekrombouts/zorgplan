@@ -59,12 +59,6 @@ def test_agent_import():
         from app.careplan_agents.specialist import dietist_agent, fysio_agent
         print("✓ specialist agents imported")
         
-        from app.careplan_agents.format import format_agent
-        print("✓ format_agent imported")
-        
-        from app.careplan_agents.email_agent import email_agent
-        print("✓ email_agent imported")
-        
     except Exception as e:
         print(f"✗ Error importing agents: {e}")
     

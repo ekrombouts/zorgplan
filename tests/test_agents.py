@@ -30,23 +30,13 @@ def test_agent_imports():
         print(f"✅ Dietist agent: {dietist_agent.name}")
         print(f"✅ Fysio agent: {fysio_agent.name}")
         
-        print("📥 Importing format agent...")
-        from app.careplan_agents.format import format_agent
-        print(f"✅ Format agent: {format_agent.name}")
-        
-        print("📥 Importing email agent...")
-        from app.careplan_agents.email_agent import email_agent
-        print(f"✅ Email agent: {email_agent.name}")
-        
         # Test collective import
         print("\n📦 Testing collective import...")
         from app.careplan_agents import (
             problem_identification_agent as pi_agent,
             care_plan_agent as cp_agent,
             dietist_agent as d_agent,
-            fysio_agent as f_agent,
-            format_agent as fmt_agent,
-            email_agent as e_agent
+            fysio_agent as f_agent
         )
         print("✅ Collective import successful")
         
